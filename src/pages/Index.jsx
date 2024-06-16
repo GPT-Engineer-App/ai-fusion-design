@@ -121,10 +121,7 @@ const Index = () => {
         </div>
       </header>
       <main className="pt-20">
-        <section
-          id="hero"
-          className="relative h-screen hero-section"
-        >
+        <section id="hero" className="relative h-screen hero-section">
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
             <h1 className="text-4xl md:text-6xl font-black mb-4 animate-fadeIn">Webinnofy: Unlock the Power of AI for Conversational Commerce</h1>
@@ -132,34 +129,28 @@ const Index = () => {
             <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md animate-pulse">Request a Demo</button>
           </div>
         </section>
-        <section id="features" className="py-20 bg-gray-100">
+        <section id="features" className="py-20 features-section">
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-bold text-center mb-12">Our Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-b from-navy-500 to-blue-500 p-8 rounded-lg shadow-lg transform transition-transform hover:scale-105"
-                >
+                <div key={index} className="feature-card">
                   <div className="flex justify-center mb-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white text-center mb-2">{feature.headline}</h3>
-                  <p className="text-gray-300 text-center">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-center mb-2">{feature.headline}</h3>
+                  <p className="text-gray-700 text-center">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        <section id="benefits" className="py-20 bg-gray-200">
+        <section id="benefits" className="py-20 benefits-section">
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-bold text-center mb-12">Our Benefits</h2>
             {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-              >
-                <div className="md:w-1/2 p-6">
+              <div key={index} className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                <div className="md:w-1/2 p-6 benefit-card">
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">{benefit.headline}</h3>
                   <p className="text-lg text-gray-700 mb-4">{benefit.description}</p>
                 </div>
@@ -175,11 +166,11 @@ const Index = () => {
             ))}
           </div>
         </section>
-        <section id="pricing" className="py-20 bg-gray-200">
+        <section id="pricing" className="py-20 pricing-section">
           <div className="container mx-auto px-6">
             <h2 className="text-4xl font-bold text-center mb-12">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-blue-100 p-8 rounded-lg shadow-lg">
+              <div className="pricing-card">
                 <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Basic</h3>
                 <ul className="mb-6">
                   <li className="flex items-center mb-2">
@@ -205,7 +196,7 @@ const Index = () => {
                   </button>
                 </div>
               </div>
-              <div className="bg-purple-100 p-8 rounded-lg shadow-lg">
+              <div className="pricing-card">
                 <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Pro</h3>
                 <ul className="mb-6">
                   <li className="flex items-center mb-2">
@@ -265,10 +256,10 @@ const Index = () => {
             </Slider>
           </div>
         </section>
-        <section id="resources" className="h-screen bg-gray-400 flex items-center justify-center">
+        <section id="resources" className="h-screen resources-section flex items-center justify-center">
           <h2 className="text-4xl font-bold">Resources Section</h2>
         </section>
-        <section id="contact" className="h-screen bg-gray-500 flex items-center justify-center">
+        <section id="contact" className="h-screen contact-section flex items-center justify-center">
           <h2 className="text-4xl font-bold">Contact Section</h2>
         </section>
       </main>

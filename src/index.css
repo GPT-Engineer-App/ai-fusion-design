@@ -42,3 +42,69 @@
 .animate-pulse {
   animation: pulse 1.5s ease-in-out infinite;
 }
+
+/* Add custom styles for the features section */
+.features-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
+
+.features-section .feature-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.features-section .feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Add custom styles for the benefits section */
+.benefits-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.benefits-section .benefit-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.benefits-section .benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Add custom styles for the pricing section */
+.pricing-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
+
+.pricing-section .pricing-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-section .pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Add custom styles for the resources section */
+.resources-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+/* Add custom styles for the contact section */
+.contact-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
