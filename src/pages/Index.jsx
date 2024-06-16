@@ -24,6 +24,18 @@ const Index = () => {
         </div>
       </header>
       <main className="pt-20">
+        <section
+          id="hero"
+          className="relative h-screen bg-cover bg-center"
+          style={{ backgroundImage: "url('/path/to/your/image.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-black mb-4 animate-fadeIn">Webinnofy: Unlock the Power of AI for Conversational Commerce</h1>
+            <p className="text-lg md:text-2xl font-light mb-8 animate-fadeIn delay-500">Transform your customer interactions, automate your workflows, and unlock unprecedented growth.</p>
+            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md animate-pulse">Request a Demo</button>
+          </div>
+        </section>
         <section id="features" className="h-screen bg-gray-100 flex items-center justify-center">
           <h2 className="text-4xl font-bold">Features Section</h2>
         </section>
