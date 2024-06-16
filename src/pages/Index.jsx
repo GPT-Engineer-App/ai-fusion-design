@@ -1,6 +1,6 @@
 import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
 import { Link } from "react-scroll"; // for smooth scrolling
-import { FaRobot, FaChartLine, FaCogs, FaShieldAlt } from "react-icons/fa"; // Import icons
+import { FaRobot, FaChartLine, FaCogs, FaShieldAlt, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa"; // Import icons
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -272,6 +272,29 @@ const Index = () => {
           <h2 className="text-4xl font-bold">Contact Section</h2>
         </section>
       </main>
+      <footer className="bg-[#141E30] text-[#b3b3b3] py-6">
+        <div className="container mx-auto px-6 text-center">
+          <p className="mb-4">© 2023 Webinnofy. All rights reserved.</p>
+          <div className="flex justify-center space-x-4 mb-4">
+            <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+            <a href="/terms-of-service" className="hover:underline">Terms of Service</a>
+          </div>
+          <div className="mb-4">
+            <p>Contact us: <a href="mailto:contact@webinnofy.com" className="hover:underline">contact@webinnofy.com</a> | <a href="tel:+1-555-555-5555" className="hover:underline">+1-555-555-5555</a></p>
+          </div>
+          <div className="flex justify-center space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-white text-[#141E30] p-2 rounded-full hover:bg-[#7065F1] transition duration-200">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-white text-[#141E30] p-2 rounded-full hover:bg-[#7065F1] transition duration-200">
+              <FaTwitter size={24} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-white text-[#141E30] p-2 rounded-full hover:bg-[#7065F1] transition duration-200">
+              <FaLinkedin size={24} />
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
