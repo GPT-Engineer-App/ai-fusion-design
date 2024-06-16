@@ -25,6 +25,29 @@ const features = [
   },
 ];
 
+const benefits = [
+  {
+    headline: "Seamless Integration",
+    description: "Integrate Webinnofy with your existing systems effortlessly.",
+    videoUrl: "https://www.example.com/video1.mp4",
+  },
+  {
+    headline: "Enhanced Customer Experience",
+    description: "Provide a personalized experience for your customers.",
+    videoUrl: "https://www.example.com/video2.mp4",
+  },
+  {
+    headline: "Scalable Solutions",
+    description: "Scale your operations with our robust and flexible solutions.",
+    videoUrl: "https://www.example.com/video3.mp4",
+  },
+  {
+    headline: "Data-Driven Insights",
+    description: "Make informed decisions with our advanced analytics.",
+    videoUrl: "https://www.example.com/video4.mp4",
+  },
+];
+
 const Index = () => {
   return (
     <div>
@@ -76,6 +99,30 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+        <section id="benefits" className="py-20 bg-gray-200">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-12">Our Benefits</h2>
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+              >
+                <div className="md:w-1/2 p-6">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{benefit.headline}</h3>
+                  <p className="text-lg text-gray-700 mb-4">{benefit.description}</p>
+                </div>
+                <div className="md:w-1/2 p-6">
+                  <div className="relative w-full h-64 bg-black">
+                    <video className="absolute inset-0 w-full h-full object-cover" controls>
+                      <source src={benefit.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
         <section id="pricing" className="h-screen bg-gray-200 flex items-center justify-center">
