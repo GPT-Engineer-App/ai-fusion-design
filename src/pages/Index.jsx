@@ -1,6 +1,9 @@
 import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
 import { Link } from "react-scroll"; // for smooth scrolling
 import { FaRobot, FaChartLine, FaCogs, FaShieldAlt } from "react-icons/fa"; // Import icons
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const features = [
   {
@@ -48,7 +51,54 @@ const benefits = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "Webinnofy transformed our business!",
+    author: "John Doe",
+    company: "Tech Innovators",
+    headshot: "/path/to/headshot1.jpg",
+  },
+  {
+    quote: "Amazing AI solutions, highly recommend!",
+    author: "Jane Smith",
+    company: "AI Ventures",
+    headshot: "/path/to/headshot2.jpg",
+  },
+  {
+    quote: "Our productivity has skyrocketed thanks to Webinnofy.",
+    author: "Mike Johnson",
+    company: "Productivity Boosters",
+    headshot: "/path/to/headshot3.jpg",
+  },
+];
+
 const Index = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -128,8 +178,30 @@ const Index = () => {
         <section id="pricing" className="h-screen bg-gray-200 flex items-center justify-center">
           <h2 className="text-4xl font-bold">Pricing Section</h2>
         </section>
-        <section id="testimonials" className="h-screen bg-gray-300 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Testimonials Section</h2>
+        <section id="testimonials" className="py-20 bg-gray-300">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
+            <Slider {...settings}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="p-4">
+                  <div className="bg-white p-6 rounded-lg shadow-lg">
+                    <div className="flex items-center mb-4">
+                      <img
+                        src={testimonial.headshot}
+                        alt={testimonial.author}
+                        className="w-16 h-16 rounded-full mr-4"
+                      />
+                      <div>
+                        <p className="text-lg font-semibold">{testimonial.author}</p>
+                        <p className="text-gray-600">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-800 italic">"{testimonial.quote}"</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </section>
         <section id="resources" className="h-screen bg-gray-400 flex items-center justify-center">
           <h2 className="text-4xl font-bold">Resources Section</h2>
