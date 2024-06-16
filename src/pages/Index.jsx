@@ -54,21 +54,21 @@ const benefits = [
 const testimonials = [
   {
     quote: "Webinnofy transformed our business!",
-    author: "John Doe",
+    author: "Alice Johnson",
     company: "Tech Innovators",
-    headshot: "/path/to/headshot1.jpg",
+    headshot: "/images/testimonial1.jpg",
   },
   {
     quote: "Amazing AI solutions, highly recommend!",
-    author: "Jane Smith",
+    author: "Robert Brown",
     company: "AI Ventures",
-    headshot: "/path/to/headshot2.jpg",
+    headshot: "/images/testimonial2.jpg",
   },
   {
     quote: "Our productivity has skyrocketed thanks to Webinnofy.",
-    author: "Mike Johnson",
+    author: "Emily Davis",
     company: "Productivity Boosters",
-    headshot: "/path/to/headshot3.jpg",
+    headshot: "/images/testimonial3.jpg",
   },
 ];
 
