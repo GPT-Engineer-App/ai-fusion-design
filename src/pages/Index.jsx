@@ -7,22 +7,22 @@ import "slick-carousel/slick/slick-theme.css";
 
 const features = [
   {
-    icon: <FaRobot size={64} />,
+    icon: <FaRobot size={64} className="text-light" />,
     headline: "AI-Powered Automation",
     description: "Leverage AI to automate your workflows and enhance productivity.",
   },
   {
-    icon: <FaChartLine size={64} />,
+    icon: <FaChartLine size={64} className="text-light" />,
     headline: "Advanced Analytics",
     description: "Gain insights with advanced analytics and data-driven decisions.",
   },
   {
-    icon: <FaCogs size={64} />,
+    icon: <FaCogs size={64} className="text-light" />,
     headline: "Customizable Solutions",
     description: "Tailor solutions to meet your specific business needs.",
   },
   {
-    icon: <FaShieldAlt size={64} />,
+    icon: <FaShieldAlt size={64} className="text-light" />,
     headline: "Robust Security",
     description: "Ensure data security with our robust security measures.",
   },
@@ -48,27 +48,6 @@ const benefits = [
     headline: "Data-Driven Insights",
     description: "Make informed decisions with our advanced analytics.",
     videoUrl: "https://www.example.com/video4.mp4",
-  },
-];
-
-const testimonials = [
-  {
-    quote: "Webinnofy transformed our business!",
-    author: "Alice Johnson",
-    company: "Tech Innovators",
-    headshot: "/images/testimonial1.jpg",
-  },
-  {
-    quote: "Amazing AI solutions, highly recommend!",
-    author: "Robert Brown",
-    company: "AI Ventures",
-    headshot: "/images/testimonial2.jpg",
-  },
-  {
-    quote: "Our productivity has skyrocketed thanks to Webinnofy.",
-    author: "Emily Davis",
-    company: "Productivity Boosters",
-    headshot: "/images/testimonial3.jpg",
   },
 ];
 
@@ -100,12 +79,12 @@ const Index = () => {
   };
 
   return (
-    <div>
+    <div className="font-primary">
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <div className="text-2xl font-bold text-gray-900">Webinnofy</div>
           <nav className="flex space-x-8">
-            {["Features", "Pricing", "Testimonials", "Resources", "Contact"].map((section) => (
+            {["Features", "Pricing", "Resources", "Contact"].map((section) => (
               <Link
                 key={section}
                 to={section.toLowerCase()}
@@ -129,12 +108,12 @@ const Index = () => {
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
             <h1 className="text-4xl md:text-6xl font-black mb-4 animate-fadeIn">Webinnofy: Unlock the Power of AI for Conversational Commerce</h1>
             <p className="text-lg md:text-2xl font-light mb-8 animate-fadeIn delay-500">Transform your customer interactions, automate your workflows, and unlock unprecedented growth.</p>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md animate-pulse">Request a Demo</button>
+            <button className="btn-primary animate-pulse">Request a Demo</button>
           </div>
         </section>
         <section id="features" className="py-20 bg-gray-100">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Features</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-primary">Our Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -153,7 +132,7 @@ const Index = () => {
         </section>
         <section id="benefits" className="py-20 bg-gray-200">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Benefits</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-primary">Our Benefits</h2>
             {benefits.map((benefit, index) => (
               <div
                 key={index}
@@ -177,7 +156,7 @@ const Index = () => {
         </section>
         <section id="pricing" className="py-20 bg-gray-200">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Pricing Plans</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-primary">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-blue-100 p-8 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Basic</h3>
@@ -200,9 +179,7 @@ const Index = () => {
                   <span className="text-lg"> one-time purchase</span>
                 </div>
                 <div className="text-center">
-                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
-                    Buy Now
-                  </button>
+                  <button className="btn-primary">Buy Now</button>
                 </div>
               </div>
               <div className="bg-purple-100 p-8 rounded-lg shadow-lg">
@@ -232,44 +209,17 @@ const Index = () => {
                   <span className="text-lg"> one-time purchase</span>
                 </div>
                 <div className="text-center">
-                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
-                    Buy Now
-                  </button>
+                  <button className="btn-primary">Buy Now</button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section id="testimonials" className="py-20 bg-gray-300">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
-            <Slider {...settings}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-4 testimonial-slide">
-                  <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.headshot}
-                        alt={testimonial.author}
-                        className="w-16 h-16 rounded-full mr-4"
-                      />
-                      <div>
-                        <p className="text-lg font-semibold">{testimonial.author}</p>
-                        <p className="text-gray-600">{testimonial.company}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-800 italic">"{testimonial.quote}"</p>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </section>
         <section id="resources" className="h-screen bg-gray-400 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Resources Section</h2>
+          <h2 className="text-4xl font-bold text-primary">Resources Section</h2>
         </section>
         <section id="contact" className="h-screen bg-gray-500 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Contact Section</h2>
+          <h2 className="text-4xl font-bold text-primary">Contact Section</h2>
         </section>
       </main>
       <footer className="bg-[#141E30] text-[#b3b3b3] py-6">
