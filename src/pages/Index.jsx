@@ -246,7 +246,7 @@ const Index = () => {
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="p-4">
-                  <div className="bg-white p-6 rounded-lg shadow-lg">
+                  <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
                     <div className="flex items-center mb-4">
                       <img
                         src={testimonial.headshot}
