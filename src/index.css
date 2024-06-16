@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add custom styles for the hero section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
 /* Add animations for the hero section */
 @keyframes fadeIn {
   from {
