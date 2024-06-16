@@ -51,27 +51,6 @@ const benefits = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Webinnofy transformed our business!",
-    author: "Alice Johnson",
-    company: "Tech Innovators",
-    headshot: "/images/testimonial1.jpg",
-  },
-  {
-    quote: "Amazing AI solutions, highly recommend!",
-    author: "Robert Brown",
-    company: "AI Ventures",
-    headshot: "/images/testimonial2.jpg",
-  },
-  {
-    quote: "Our productivity has skyrocketed thanks to Webinnofy.",
-    author: "Emily Davis",
-    company: "Productivity Boosters",
-    headshot: "/images/testimonial3.jpg",
-  },
-];
-
 const Index = () => {
   const settings = {
     dots: true,
@@ -105,7 +84,7 @@ const Index = () => {
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <div className="text-2xl font-bold text-gray-900">Webinnofy</div>
           <nav className="flex space-x-8">
-            {["Features", "Pricing", "Testimonials", "Resources", "Contact"].map((section) => (
+            {["Features", "Pricing", "Resources", "Contact"].map((section) => (
               <Link
                 key={section}
                 to={section.toLowerCase()}
@@ -238,31 +217,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="testimonials" className="py-20 bg-gray-300">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
-            <Slider {...settings}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-4 testimonial-slide">
-                  <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.headshot}
-                        alt={testimonial.author}
-                        className="w-16 h-16 rounded-full mr-4"
-                      />
-                      <div>
-                        <p className="text-lg font-semibold">{testimonial.author}</p>
-                        <p className="text-gray-600">{testimonial.company}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-800 italic">"{testimonial.quote}"</p>
-                  </div>
-                </div>
-              ))}
-            </Slider>
           </div>
         </section>
         <section id="resources" className="h-screen bg-gray-400 flex items-center justify-center">
