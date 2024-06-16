@@ -245,7 +245,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-4">
+                <div key={index} className="p-4 testimonial-slide">
                   <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
                     <div className="flex items-center mb-4">
                       <img
