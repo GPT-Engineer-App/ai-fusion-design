@@ -26,8 +26,7 @@ const Index = () => {
       <main className="pt-20">
         <section
           id="hero"
-          className="relative h-screen bg-cover bg-center"
-          style={{ backgroundImage: "url('/path/to/your/image.jpg')" }}
+          className="relative h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 flex items-center justify-center text-center text-white"
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
