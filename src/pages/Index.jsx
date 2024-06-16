@@ -125,8 +125,70 @@ const Index = () => {
             ))}
           </div>
         </section>
-        <section id="pricing" className="h-screen bg-gray-200 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Pricing Section</h2>
+        <section id="pricing" className="py-20 bg-gray-200">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-12">Pricing Plans</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-blue-100 p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Basic</h3>
+                <ul className="mb-6">
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> GPT-3.5-turbo
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> 10 AI Agents
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Voice Assistant Capabilities
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Exceptional Customer Support
+                  </li>
+                </ul>
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-black">$599</span>
+                  <span className="text-lg"> one-time purchase</span>
+                </div>
+                <div className="text-center">
+                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+              <div className="bg-purple-100 p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Pro</h3>
+                <ul className="mb-6">
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> GPT-4, Gemini Advanced, Opus, Llama 3, and other cutting-edge models
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> 100 AI Agents
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Advanced Thinking Methods
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Positive Emotion Prompting
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Voice Assistant Capabilities
+                  </li>
+                  <li className="flex items-center mb-2">
+                    <span className="text-green-500 mr-2">✓</span> Exceptional Customer Support
+                  </li>
+                </ul>
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-black">$7999</span>
+                  <span className="text-lg"> one-time purchase</span>
+                </div>
+                <div className="text-center">
+                  <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="testimonials" className="h-screen bg-gray-300 flex items-center justify-center">
           <h2 className="text-4xl font-bold">Testimonials Section</h2>
