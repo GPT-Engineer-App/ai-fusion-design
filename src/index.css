@@ -12,6 +12,69 @@
   padding: 0 20px;
 }
 
+/* Add custom styles for the features section */
+.features-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
+
+.features-section .feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.features-section .feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Add custom styles for the benefits section */
+.benefits-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.benefits-section .benefit-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.benefits-section .benefit-card:hover {
+  transform: scale(1.05);
+}
+
+/* Add custom styles for the pricing section */
+.pricing-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
+
+.pricing-section .pricing-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-section .pricing-card:hover {
+  transform: scale(1.05);
+}
+
+/* Add custom styles for the resources section */
+.resources-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+/* Add custom styles for the contact section */
+.contact-section {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  padding: 40px 20px;
+}
+
 /* Add animations for the hero section */
 @keyframes fadeIn {
   from {

@@ -51,27 +51,6 @@ const benefits = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Webinnofy transformed our business!",
-    author: "Alice Johnson",
-    company: "Tech Innovators",
-    headshot: "/images/testimonial1.jpg",
-  },
-  {
-    quote: "Amazing AI solutions, highly recommend!",
-    author: "Robert Brown",
-    company: "AI Ventures",
-    headshot: "/images/testimonial2.jpg",
-  },
-  {
-    quote: "Our productivity has skyrocketed thanks to Webinnofy.",
-    author: "Emily Davis",
-    company: "Productivity Boosters",
-    headshot: "/images/testimonial3.jpg",
-  },
-];
-
 const Index = () => {
   const settings = {
     dots: true,
@@ -132,14 +111,14 @@ const Index = () => {
             <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md animate-pulse">Request a Demo</button>
           </div>
         </section>
-        <section id="features" className="py-20 bg-gray-100">
+        <section id="features" className="py-20 features-section">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Features</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-b from-navy-500 to-blue-500 p-8 rounded-lg shadow-lg transform transition-transform hover:scale-105"
+                  className="feature-card"
                 >
                   <div className="flex justify-center mb-4">
                     {feature.icon}
@@ -151,17 +130,17 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="benefits" className="py-20 bg-gray-200">
+        <section id="benefits" className="py-20 benefits-section">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Benefits</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Benefits</h2>
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                className={`flex flex-col md:flex-row items-center mb-12 benefit-card ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >
                 <div className="md:w-1/2 p-6">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{benefit.headline}</h3>
-                  <p className="text-lg text-gray-700 mb-4">{benefit.description}</p>
+                  <h3 className="text-3xl font-bold text-white mb-4">{benefit.headline}</h3>
+                  <p className="text-lg text-gray-300 mb-4">{benefit.description}</p>
                 </div>
                 <div className="md:w-1/2 p-6">
                   <div className="relative w-full h-64 bg-black">
@@ -175,12 +154,12 @@ const Index = () => {
             ))}
           </div>
         </section>
-        <section id="pricing" className="py-20 bg-gray-200">
+        <section id="pricing" className="py-20 pricing-section">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Pricing Plans</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-blue-100 p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Basic</h3>
+              <div className="pricing-card">
+                <h3 className="text-2xl font-bold text-center mb-4 text-white">Webinnofy Basic</h3>
                 <ul className="mb-6">
                   <li className="flex items-center mb-2">
                     <span className="text-green-500 mr-2">✓</span> GPT-3.5-turbo
@@ -196,8 +175,8 @@ const Index = () => {
                   </li>
                 </ul>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-black">$599</span>
-                  <span className="text-lg"> one-time purchase</span>
+                  <span className="text-4xl font-black text-white">$599</span>
+                  <span className="text-lg text-gray-300"> one-time purchase</span>
                 </div>
                 <div className="text-center">
                   <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
@@ -205,8 +184,8 @@ const Index = () => {
                   </button>
                 </div>
               </div>
-              <div className="bg-purple-100 p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-center mb-4">Webinnofy Pro</h3>
+              <div className="pricing-card">
+                <h3 className="text-2xl font-bold text-center mb-4 text-white">Webinnofy Pro</h3>
                 <ul className="mb-6">
                   <li className="flex items-center mb-2">
                     <span className="text-green-500 mr-2">✓</span> GPT-4, Gemini Advanced, Opus, Llama 3, and other cutting-edge models
@@ -228,8 +207,8 @@ const Index = () => {
                   </li>
                 </ul>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-black">$7999</span>
-                  <span className="text-lg"> one-time purchase</span>
+                  <span className="text-4xl font-black text-white">$7999</span>
+                  <span className="text-lg text-gray-300"> one-time purchase</span>
                 </div>
                 <div className="text-center">
                   <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-md">
@@ -240,36 +219,15 @@ const Index = () => {
             </div>
           </div>
         </section>
-        <section id="testimonials" className="py-20 bg-gray-300">
+        <section id="resources" className="py-20 resources-section">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
-            <Slider {...settings}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-4 testimonial-slide">
-                  <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-                    <div className="flex items-center mb-4">
-                      <img
-                        src={testimonial.headshot}
-                        alt={testimonial.author}
-                        className="w-16 h-16 rounded-full mr-4"
-                      />
-                      <div>
-                        <p className="text-lg font-semibold">{testimonial.author}</p>
-                        <p className="text-gray-600">{testimonial.company}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-800 italic">"{testimonial.quote}"</p>
-                  </div>
-                </div>
-              ))}
-            </Slider>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Resources Section</h2>
           </div>
         </section>
-        <section id="resources" className="h-screen bg-gray-400 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Resources Section</h2>
-        </section>
-        <section id="contact" className="h-screen bg-gray-500 flex items-center justify-center">
-          <h2 className="text-4xl font-bold">Contact Section</h2>
+        <section id="contact" className="py-20 contact-section">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Section</h2>
+          </div>
         </section>
       </main>
       <footer className="bg-[#141E30] text-[#b3b3b3] py-6">
